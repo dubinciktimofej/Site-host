@@ -1,0 +1,255 @@
+body {
+    width: 1500px;
+    margin: 0 auto;
+}
+
+@keyframes anim-1{
+	from{margin-left:3px;}
+	to{margin-left:500px;}
+}
+#d1{
+	animation:anim-1 4s 3;
+    margin-top: 50px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid red;
+}
+
+
+@keyframes anim-2{
+	from{margin-left:3px;}
+	to{margin-left:500px;}
+}
+#d2{
+	animation:anim-2 4s infinite;
+    margin-top: 50px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid red;
+}
+
+@keyframes anim-3{
+	from{background-color: black;}
+	to{background-color: white;}
+}
+#d3{
+	animation:anim-3 5s infinite;
+    margin-top: 50px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid red;
+}
+
+
+.big-square {
+    margin-top: 50px;
+    width: 400px;
+    height: 300px;
+    border: 2px solid #333;
+    position: relative;
+}
+
+.small-square {
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: moveAround 8s linear infinite;
+}
+
+@keyframes moveAround {
+  0% {
+    margin-left: 0%; margin-top: 0%;
+  }
+  25% {
+    margin-left: 85%; margin-top: 0%;
+  }
+  50% {
+    margin-left: 85%; margin-top: 60%;
+  }
+  75% {
+    margin-left: 0%; margin-top: 60%;
+  }
+  100% {
+    margin-left: 0%; margin-top: 0%;
+  }
+}
+
+.big-square-2 {
+    margin-top: 50px;
+    width: 400px;
+    height: 300px;
+    border: 2px solid #333;
+    position: relative;
+}
+
+.small-square-2 {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: moveAround 8s linear infinite, anim-3 5s infinite;
+}
+
+
+#d5{
+	animation:anim-5 5s alternate infinite;
+    margin-top: 50px;
+    margin-bottom: 150px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid red;
+}
+
+
+@keyframes anim-5{ 
+    0% {margin-left: 0%;}
+    50% {margin-left: 50%;}
+    100% {margin-left: 100%;}
+}
+
+@keyframes test{
+	0%{width: 0%;}
+	100%{width: 100%;}
+}
+
+#wrapper{
+	margin: 0px auto;
+    margin-bottom: 50px;
+	width: 50%;
+	height: 30px;
+	border: 1px solid red;
+
+}
+#test{
+    margin: 0px auto;
+	background: orange;
+	width: 0%;
+	height: 30px;
+	
+	-webkit-animation:test 5s linear 1 forwards;
+	animation:test 5s linear 1 forwards;
+}
+
+@keyframes test-2{
+	0%{width: 0%;}
+	100%{width: 50%;}
+}
+
+#wrapper-2{
+    margin-bottom: 50px;
+	width: 50%;
+	height: 30px;
+	border: 1px solid red;
+
+}
+
+#test-2{
+	background: yellow;
+	width: 0%;
+	height: 30px;
+	
+	-webkit-animation:test-2 5s linear 1 forwards;
+	animation:test-2 5s linear 1 forwards;
+}
+
+#d8{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid red;
+}
+
+#d8:hover {
+    animation: move 30s linear infinite;
+}
+
+@keyframes move {
+    0% {margin-left: 0%;}
+    50% {margin-left: 50%;}
+    100% {margin-left: 100%;}
+}
+
+.redblock {
+    width: 200px;
+    border: 1px solid red;
+    line-height: 80px;
+    text-align: center;
+}
+
+.moving {
+    margin-top: 20px;
+    padding: 10px;
+    width: 100px;
+    height: 50px;
+    border: 1px solid blue;
+    text-align: center;
+}
+
+.redblock:hover + .moving {
+  opacity: 1; 
+  animation: move 10s linear infinite;
+}
+
+.ramka {
+    margin: 0px auto;
+    margin-bottom: 50px;
+	width: 220px;
+	height: 220px;
+	border: 1px solid red;
+	position: relative;
+}
+
+.ball {
+    margin: 15px;
+    background: blue;
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	position: absolute;
+	
+	animation: bouncing 5s infinite;
+}
+
+@keyframes bouncing{
+	40%, 70%, 90%{
+		animation-timing-function: ease-out;
+		bottom: 0;
+	}
+	0%{
+		bottom: 200px;
+		left: 0;
+		animation-timing-function: ease-in;
+	}
+	55%{
+		bottom: 50px;
+		animation-timing-function: ease-in;
+	}
+	80%{
+		bottom: 25px;
+		animation-timing-function: ease-in;
+	}
+	95%{
+		bottom: 10px;
+		animation-timing-function: ease-in;
+	}
+	100%{
+		left: 110px;
+		bottom: 0;
+		animation-timing-function: ease-out;
+	}
+    
+}
+.label {
+    margin-top: 30px;
+    margin-bottom: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
